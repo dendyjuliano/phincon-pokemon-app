@@ -1,0 +1,27 @@
+.pokemonName {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.pokemonAbilities {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.wrapperBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.wrapperTypes {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wrapperContentTypes {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}

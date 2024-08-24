@@ -1,0 +1,9 @@
+.body {
+  background: #ffffff;
+  padding: 12px;
+  border: 2px solid #ebebeb;
+}
+
+.banner {
+  width: -webkit-fill-available;
+}

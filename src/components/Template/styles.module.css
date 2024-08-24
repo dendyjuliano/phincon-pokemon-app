@@ -1,0 +1,64 @@
+.bodyTemplate {
+  min-height: 100vh;
+  margin-bottom: 50px;
+}
+
+.bgBanner {
+  background: #e19720;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.wrapperContent {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.headerWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+}
+
+.nameHeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: flex-end;
+}
+
+.nameHeaderWrapper p {
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.nameHeaderWrapper p:nth-child(2) {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.logo {
+  width: 200px;
+}
+
+.imagePikachu {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 250px;
+  z-index: -1;
+}
+
+.content {
+  background: #ffffff;
+  padding: 12px;
+  border: 2px solid #ebebeb;
+}
