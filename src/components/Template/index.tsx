@@ -1,11 +1,13 @@
 import React from "react";
 import styles from "./styles.module.css";
+import useBreakpoint from "../../hooks/useBreakpoint";
 
 type TemplateProps = {
   children: React.ReactNode;
 };
 
 export default function Template({ children }: TemplateProps) {
+  const { isDekstop } = useBreakpoint();
   return (
     <div className={styles.bodyTemplate}>
       <div className={styles.bgBanner}></div>
@@ -19,7 +21,9 @@ export default function Template({ children }: TemplateProps) {
         </div>
         <div className={styles.content}>{children}</div>
       </div>
-      <img src="/assets/pikachu.png" className={styles.imagePikachu} alt="" />
+      {isDekstop && (
+        <img src="/assets/pikachu.png" className={styles.imagePikachu} alt="" />
+      )}
     </div>
   );
 }

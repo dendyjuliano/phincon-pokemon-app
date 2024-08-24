@@ -37,3 +37,7 @@ h3 {
 .ant-pagination-options {
   display: none !important;
 }
+
+.ant-btn {
+  font-weight: 600;
+}

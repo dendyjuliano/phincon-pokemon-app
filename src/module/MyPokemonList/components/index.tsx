@@ -5,42 +5,34 @@ import styles from "./styles.module.css";
 import { PokemonProps } from "../../../interface";
 import useBreakpoint from "../../../hooks/useBreakpoint";
 
-type PokemonListComponentProps = {
+type MyPokemonListComponentProps = {
   pokemons: any[];
-  currentPage: number;
-  totalPages: number;
-  onPageChange: (page: number) => void;
   isLoading: boolean;
+  onSelectId?: (value: number) => void;
+  onClickRelease: (nickname: string) => void;
 };
 
-export default function PokemonListComponent({
+export default function MyPokemonListComponent({
   pokemons,
-  currentPage,
-  totalPages,
-  onPageChange,
+  onSelectId,
   isLoading = false,
-}: PokemonListComponentProps) {
+  onClickRelease,
+}: MyPokemonListComponentProps) {
   const { isDekstop } = useBreakpoint();
   return (
     <div className={styles.wrapper}>
-      <div className={styles.tagLine}>
-        <h2>let's go catch pokemon</h2>
-      </div>
-
       <List
         grid={{ gutter: [16, 16], column: isDekstop ? 4 : 2 }}
         dataSource={pokemons}
-        pagination={{
-          current: currentPage,
-          total: totalPages * 12,
-          onChange: onPageChange,
-          pageSize: 12,
-          align: "center",
-        }}
         loading={isLoading}
         renderItem={(item: PokemonProps) => (
           <Col>
-            <CardPokemon pokemon={item} />
+            <CardPokemon
+              pokemon={item}
+              isSelected
+              onClickEdit={onSelectId}
+              onClickRelease={onClickRelease}
+            />
           </Col>
         )}
       />

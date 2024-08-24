@@ -23,16 +23,9 @@ export const getPokemonDetail = async (id: number) => {
   }
 };
 
-export const catchPokemon = async (pokemonData: {
-  id: number;
-  name: string;
-  nickname: string;
-}) => {
+export const catchPokemon = async () => {
   try {
-    const response = await axios.post(
-      `${BASE_URL}/pokemons/catch`,
-      pokemonData
-    );
+    const response = await axios.post(`${BASE_URL}/pokemons/catch`);
     return response.data;
   } catch (error) {
     console.error("Error catching pokemon:", error);

@@ -1,0 +1,36 @@
+.imgPokemon {
+  width: 100%;
+}
+
+.wrapperContentDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.namePokemon {
+  font-size: 26px;
+  font-weight: 600;
+}
+
+.descriptionPokemon {
+  font-weight: 500;
+  color: #9b9b9b;
+}
+
+.wrapperContentTypes {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+
+.nameEffect {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.effect {
+  color: #9b9b9b;
+  font-weight: 500;
+}
