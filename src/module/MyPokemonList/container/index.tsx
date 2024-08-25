@@ -74,7 +74,7 @@ export default function MyPokemonList() {
     });
 
   useEffect(() => {
-    if (data) {
+    if (data?.length > 0) {
       setPokemons(data);
     }
   }, [data]);

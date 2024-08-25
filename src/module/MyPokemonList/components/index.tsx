@@ -13,7 +13,7 @@ type MyPokemonListComponentProps = {
 };
 
 export default function MyPokemonListComponent({
-  pokemons,
+  pokemons = [],
   onSelectId,
   isLoading = false,
   onClickRelease,
